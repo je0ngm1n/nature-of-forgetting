@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Nature of Forgetting — 나의 관극 기록</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;--bg:#efe3c8;--ink:#3f2617;--red:#9e2f28;--sub:#8a6b52;--line:#bda680;--p2:#e6d5b2;--R:#dba48d;--S:#bdd0ab;--A:#adc2d8;--H:#d2c8b4;--on:#f6ecd6;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241a13;--ink:#eadcc0;--red:#d0574d;--sub:#a58b70;--line:#5a4535;--p2:#2e2218;--R:#7a4b3d;--S:#526248;--A:#4b6079;--H:#4a4032;--on:#241a13}}
+:root[data-theme="dark"]{--bg:#241a13;--ink:#eadcc0;--red:#d0574d;--sub:#a58b70;--line:#5a4535;--p2:#2e2218;--R:#7a4b3d;--S:#526248;--A:#4b6079;--H:#4a4032;--on:#241a13}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 'Nanum Myeongjo',Georgia,'Batang',serif;padding-bottom:64px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+main{max-width:720px;margin:0 auto;padding:22px 18px}
+h1{font-size:34px;line-height:1.1;margin:8px 0 2px;font-weight:800;letter-spacing:-.5px}
+h2{font-size:17px;margin:28px 0 8px;padding-bottom:4px;border-bottom:2px solid var(--red);font-weight:800}
+.sub{color:var(--sub);margin:0 0 18px}
+button{font:inherit;color:inherit;background:none;border:1px solid var(--ink);padding:5px 12px;cursor:pointer;border-radius:2px}
+button:hover{background:var(--p2)}button:disabled{opacity:.4;cursor:default}
+.pri{background:var(--red);border-color:var(--red);color:var(--on)}.pri:hover{background:var(--red);opacity:.9}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--bg);border-top:2px solid var(--red);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+nav button{flex:1;border:0;padding:14px 0;letter-spacing:1px;font-weight:700;color:var(--sub)}nav button.on{color:var(--red);box-shadow:inset 0 3px 0 var(--red)}
+.stub{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink)}
+.stub>div{padding:12px 14px;border-bottom:1px solid var(--line)}.stub>div:nth-child(odd){border-right:1px dashed var(--ink)}.stub>div:nth-last-child(-n+2){border-bottom:0}
+.stub small{color:var(--sub);display:block}.stub b{font-size:26px;font-weight:800}.stub b.t{font-size:20px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.chips button{padding:3px 12px;border-color:var(--line)}.chips button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pf{border-bottom:1px solid var(--line);padding:10px 2px}.pf.done{background:var(--p2);border-left:3px solid var(--red);padding-left:9px}
+.pf .h{display:flex;align-items:baseline;gap:8px}.pf .h b{font-size:17px}.pf .h .r{margin-left:auto}
+.cast{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:4px;font-size:14px}.cast em{display:block;font-style:normal;font-size:11px;color:var(--sub);white-space:nowrap}
+.st{font-size:13px;color:var(--sub);margin-top:3px}.st.d{color:var(--red)}
+.pz{width:13px;height:13px;fill:var(--red);vertical-align:-2px;margin-right:4px}
+.bar{display:grid;grid-template-columns:minmax(90px,38%) 1fr 44px;align-items:center;gap:8px;font-size:14px;padding:2px 0}.bar i{height:6px;background:var(--red);display:block}.bar b{text-align:right;font-weight:700}
+.mapw{overflow:auto;border:1px solid var(--line);background:var(--p2);max-height:70vh;-webkit-overflow-scrolling:touch}
+.map{position:relative}.seat{position:absolute;padding:0;border:1px solid rgba(63,38,23,.45);border-radius:2px;line-height:1;display:flex;align-items:center;justify-content:center;color:var(--ink);background:var(--H)}
+.gR{background:var(--R)}.gS{background:var(--S)}.gA{background:var(--A)}.seat:hover{outline:2px solid var(--red);z-index:2}
+.seat.has{background:var(--red);color:var(--on);border-color:var(--red)}.seat.sel{background:var(--ink);color:var(--bg);outline:2px solid var(--red);z-index:3}
+.seat i{position:absolute;top:-6px;right:-5px;font-style:normal;font-size:10px;background:var(--ink);color:var(--bg);border-radius:8px;min-width:14px;height:14px;line-height:14px;text-align:center;z-index:4}
+.deco{position:absolute;border:1px solid var(--sub);color:var(--sub);display:flex;align-items:center;justify-content:center;font-size:13px}
+.lg{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;margin:6px 0;align-items:center}.lg s{display:inline-block;width:14px;height:11px;border:1px solid var(--sub);vertical-align:-1px;margin-right:4px;text-decoration:none}
+.zm{display:flex;gap:6px;align-items:center;margin:6px 0;font-size:13px;color:var(--sub)}
+.ov{position:fixed;inset:0;background:rgba(40,25,15,.55);z-index:10;display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:var(--bg);width:100%;max-width:760px;max-height:94vh;display:flex;flex-direction:column;overflow:hidden;border-top:3px solid var(--red)}.sb{overflow:auto;padding:16px;flex:1;min-height:0}.sheet .mapw{max-height:48vh}#mp{border-top:2px solid var(--red);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg)}
+.tabs{display:flex;margin:10px 0}.tabs button{flex:1;border-radius:0}.tabs button.on{background:var(--ink);color:var(--bg)}
+select{font:inherit;background:var(--bg);color:var(--ink);border:1px solid var(--ink);padding:7px;margin:0 6px 8px 0;border-radius:2px;max-width:100%}
+.dt{padding:8px 0;border-bottom:1px dashed var(--line)}.dt b{font-size:15px}
+.empty{color:var(--sub);padding:14px 0}
+</style></head><body><main id="app"></main><nav id="nav"></nav><div id="modal"></div>
+<script>
+/* ===== DATA: performances (source: 공식 CAST SCHEDULE 5장). Token = MMDD-HHMM-톰/소피이자벨라/마이크/엠마 코드. '공연 없음'(9/28,10/12,10/26) 미생성 ===== */
+const T={J:'전성우',P:'박정원',B:'백성현'},SI={K:'김주연',L:'이정화'},MK={G:'곽다인',Y:'김시유'},EM={A:'강은나',S:'송나영'};
+const RAW=`0918-2000-JKGA 0919-1500-PLYS 0919-1930-BKGA 0920-1500-JLYS 0920-1930-BLYS
+0922-2000-JLGA 0923-1600-PKYA 0923-2000-BKGS 0924-1500-JLYS 0924-1930-BLYS 0925-1500-PKGA 0926-1500-JKGA 0926-1930-JKGS 0927-1500-BLYA 0927-1930-PLYS 0929-2000-BLYS 0930-1600-JKGS 0930-2000-PKGA
+1001-2000-JLGA 1002-2000-PLYS 1003-1500-BKYA 1003-1930-JKYA 1004-1500-PLGS 1004-1930-BLGA 1005-1500-JKYS 1005-1930-JLGA
+1007-2000-BKYS 1008-2000-PLYA 1009-1500-JKGS 1009-1930-BKGS 1010-1500-JLYA 1010-1930-BLYA 1011-1500-PKGA 1011-1930-PLGS 1013-2000-PLGA 1014-1600-BKYS 1014-2000-JKYA 1015-2000-PKGA 1016-2000-PLYS 1017-1500-JKGS 1017-1930-PKGS 1018-1500-BLYA 1018-1930-JLYA
+1020-2000-PLGS 1021-2000-JKYS 1022-2000-BKGA 1023-2000-PLYA 1024-1500-BLYS 1024-1930-PKYA 1025-1500-JKGS 1025-1930-JLGA 1027-2000-PLGS 1028-1600-JKYS 1028-2000-JLYS 1029-2000-BKGA 1030-2000-JLGA 1031-1500-PKYA 1031-1930-PKYA 1101-1500-BLGS
+1103-2000-JLGS 1104-1600-PKYS 1104-2000-BLYS 1105-2000-PKGA 1106-2000-BKYA 1107-1500-PLGA 1107-1930-BLGA 1108-1500-JKYS 1108-1930-JKYS`;
+const P=RAW.trim().split(/\s+/).map(t=>{const[d,tm,c]=t.split('-'),date=`2026-${d.slice(0,2)}-${d.slice(2)}`;return{id:`${date}-${tm}`,date,time:tm.slice(0,2)+':'+tm.slice(2),cast:{tom:T[c[0]],sophieIsabella:SI[c[1]],mike:MK[c[2]],emma:EM[c[3]]}}}).sort((a,b)=>a.id<b.id?-1:1);
+
+/* ===== DATA: seats (source: 공식 등급별 좌석배치도). x,y = 이미지 좌표(좌석 중심), w=2 → 휠체어석 ===== */
+/* 주의(판독 한계): 열 번호는 도면에 표기가 없어 무대에서 가까운 순서로 부여함(중앙 1열=휠체어석 줄). 사이드 1~9번(회색)은 등급 색이 범례(R/S/A)에 없어 grade 'H'(판매 보류 추정)로 표기 */
+/* 표시명(l)과 집계 층(f)만 변경. 내부 seatId 접두사(i)는 기존 그대로 유지 → 기존 localStorage 기록 호환 */
+const SEC={FRONT:{f:1,l:'1층 OP석'},L:{f:1,l:'1층 L열'},R:{f:1,l:'1층 R열'},LS:{f:2,i:1,l:'2층 좌측 사이드'},RS:{f:2,i:1,l:'2층 우측 사이드'},CENTER:{f:1,l:'1층 객석'},MAIN:{f:2,l:'2층'}};
+const S=[];const g=(sec,row,num,grade,x,y,w=1)=>S.push({id:`${SEC[sec].i||SEC[sec].f}F-${sec}-${row}-${num}`,f:SEC[sec].f,sec,row:String(row),num,grade,x,y,w,wc:w==2});
+for(const s of['LS','RS'])for(let n=1;n<=16;n++)g(s,1,n,n<10?'H':'A',s=='LS'?116:964,n<8?472+23.1*(n-1):663+23*(n-8));
+for(let i=0;i<11;i++){const y=517+22.9*i;g('L','OUT',12+i,'R',207,y);g('L','IN',1+i,'R',237,y);g('R','IN',1+i,'R',843,y);g('R','OUT',12+i,'R',873,y)}
+for(let r=0;r<3;r++)for(let c=0;c<17;c++)g('FRONT',r+1,r*17+c+1,'R',300+30*c,571+22.5*r);
+[[1,0,2],[2,2,2],[3,4,1],[4,5,1],[5,6,1],[6,7,1],[7,8,1],[8,9,1],[9,10,1],[10,11,2],[11,13,2]].forEach(([n,c,w])=>g('CENTER',1,n,'R',329+30*c+(w==2?15:0),677,w));
+for(let r=0;r<6;r++)for(let c=0;c<15;c++)g('CENTER',r+2,c+1,'R',329+30*c,700+23*r);
+for(let r=0;r<5;r++)for(let c=0;c<20;c++)g('MAIN',r+1,c+1,'S',254+30.1*c,926+23*r);
+const SM=Object.fromEntries(S.map(s=>[s.id,s])),PM=Object.fromEntries(P.map(p=>[p.id,p]));
+
+/* ===== RECORDS (localStorage) ===== */
+const KEY='nof-records-v1';let recs=[];try{recs=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){recs=[]}
+if(!Array.isArray(recs))recs=[];
+const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(recs))}catch(e){}};
+const rec=id=>recs.find(r=>r.performanceId==id);
+recs=recs.filter(r=>r&&PM[r.performanceId]&&SM[r.seatId]);
+
+/* ===== helpers ===== */
+const $=s=>document.querySelector(s);
+const ROLES=[['tom','톰'],['sophieIsabella','소피·이자벨라'],['mike','마이크'],['emma','엠마']];
+const GR={R:'R석',S:'S석',A:'A석',H:'등급 미표기(판매 보류 추정)'};
+const fd=d=>d.replace(/-/g,'.'),wd=d=>'일월화수목금토'[new Date(d+'T00:00:00').getDay()];
+const rowName=s=>s.sec=='LS'||s.sec=='RS'?SEC[s.sec].l:s.sec=='L'||s.sec=='R'?`${SEC[s.sec].l} ${s.row=='IN'?'안쪽':'바깥쪽'}`:s.sec=='CENTER'&&s.row=='1'?'1층 객석 1열(휠체어석 줄)':`${SEC[s.sec].l} ${s.row}열`;
+const seatName=s=>`${rowName(s)} ${s.wc?'휠체어 ':''}${s.num}번`;
+const counts=()=>{const c={};recs.forEach(r=>c[r.seatId]=(c[r.seatId]||0)+1);return c};
+const castH=p=>`<div class="cast">${ROLES.map(([k,l])=>`<span><em>${l}</em>${p.cast[k]}</span>`).join('')}</div>`;
+const PZ='<svg class="pz" viewBox="0 0 12 12"><path d="M1 3h3a1.5 1.5 0 1 1 3 0h4v3a1.5 1.5 0 1 0 0 3v2H1z"/></svg>';
+const tally=(arr)=>{const c={};arr.forEach(k=>c[k]=(c[k]||0)+1);return Object.entries(c).sort((a,b)=>b[1]-a[1])};
+const bars=e=>{if(!e.length)return'<div class="empty">기록이 없습니다.</div>';const m=e[0][1];return e.map(([k,n])=>`<div class="bar"><span>${k}</span><span><i style="width:${n/m*100}%"></i></span><b>${n}회</b></div>`).join('')};
+const st={tab:'home',f:'all',mo:'all',k:1.5,ss:null,m:null};
+const sortedRecs=()=>[...recs].sort((a,b)=>a.performanceId<b.performanceId?1:-1);
+
+/* ===== seat map (shared by 기록 모달 & SEATS) ===== */
+const X0=90,Y0=365;
+function mapH(sel,showHas){const k=st.k,c=showHas?counts():{};
+ const d=(l,t,w,h,tx,ex='')=>`<div class="deco" style="left:${(l-X0)*k}px;top:${(t-Y0)*k}px;width:${w*k}px;height:${h*k}px;${ex}">${tx}</div>`;
+ let h=`<div class="zm"><button data-act="zoom" data-v="-.3">−</button><button data-act="zoom" data-v=".3">＋</button>좌우로 밀어서 이동 · 확대/축소</div><div class="mapw" id="mapw"><div class="map" style="width:${900*k}px;height:${730*k}px">`;
+ h+=d(291,378,498,148,'STAGE')+d(155,378,770,502,'','border-top:0;border-bottom:2px solid var(--sub);z-index:0;pointer-events:none')+d(500,850,80,22,'1F','border:0')+d(500,1043,80,22,'2F','border:0')+d(190,480,64,16,'L열','border:0')+d(826,480,64,16,'R열','border:0');
+ S.forEach(s=>{const w=s.w==2?54:24,n=c[s.id]||0;h+=`<button class="seat g${s.grade}${n?' has':''}${s.id==sel?' sel':''}" data-seat="${s.id}" title="${seatName(s)}" style="left:${(s.x-w/2-X0)*k}px;top:${(s.y-10-Y0)*k}px;width:${w*k}px;height:${20*k}px;font-size:${Math.max(9,8.5*k)}px">${s.wc?'휠'+s.num:s.num}${n>1?`<i>${n}</i>`:''}</button>`});
+ return h+'</div></div>'+`<div class="lg"><span><s style="background:var(--R)"></s>R석</span><span><s style="background:var(--S)"></s>S석</span><span><s style="background:var(--A)"></s>A석</span><span><s style="background:var(--H)"></s>등급 미표기</span>${showHas?'<span><s style="background:var(--red)"></s>내가 앉은 좌석</span>':'<span><s style="background:var(--ink)"></s>선택한 좌석</span>'}</div>`}
+function centerOn(id){const w=$('#mapw'),b=id&&w&&w.querySelector(`[data-seat="${id}"]`);if(!w)return;if(b){w.scrollLeft=b.offsetLeft-w.clientWidth/2;w.scrollTop=b.offsetTop-w.clientHeight/2}else w.scrollLeft=(w.scrollWidth-w.clientWidth)/2}
+function mark(id){document.querySelectorAll('.map .sel').forEach(e=>e.classList.remove('sel'));const b=document.querySelector(`.map [data-seat="${id}"]`);if(b)b.classList.add('sel')}
+
+/* ===== pages ===== */
+function home(){const n=recs.length,ac=tally(recs.flatMap(r=>ROLES.map(([k])=>PM[r.performanceId].cast[k]))),sr=sortedRecs();
+ return`<h1>The Nature of<br>Forgetting</h1><p class="sub">나의 관극 기록</p>
+ <div class="stub"><div><small>총 관람</small><b>${n}회</b></div><div><small>앉아본 좌석</small><b>${new Set(recs.map(r=>r.seatId)).size}석</b></div>
+ <div><small>가장 많이 본 배우</small><b class="t">${n?ac[0][0]+' '+ac[0][1]+'회':'-'}</b></div><div><small>최근 관람</small><b class="t">${n?fd(PM[sr[0].performanceId].date):'-'}</b></div></div>
+ <h2>최근 관람 기록</h2>${n?sr.slice(0,5).map(r=>{const p=PM[r.performanceId];return`<div class="pf done" data-act="open" data-v="${p.id}"><div class="h"><b>${fd(p.date)} ${wd(p.date)}</b><span>${p.time}</span></div>${castH(p)}<div class="st d">${PZ}${seatName(SM[r.seatId])}</div></div>`}).join(''):'<div class="empty">아직 기록이 없습니다. SCHEDULE에서 관람한 회차를 골라 좌석을 기록하세요.</div>'}`}
+function sched(){const L=P.filter(p=>(st.f=='all'||(st.f=='w')==!!rec(p.id))&&(st.mo=='all'||+p.date.slice(5,7)==st.mo));
+ const ch=(a,v,l)=>`<button class="${st[a]==v?'on':''}" data-act="${a}" data-v="${v}">${l}</button>`;
+ return`<h1>Schedule</h1><p class="sub">2026.09.18 – 11.08 · 총 ${P.length}회차 · 관람 ${recs.length}회</p>
+ <div class="chips">${ch('f','all','전체')}${ch('f','w','관람')}${ch('f','n','미관람')}</div><div class="chips">${ch('mo','all','전체 월')}${ch('mo',9,'9월')}${ch('mo',10,'10월')}${ch('mo',11,'11월')}</div>
+ ${L.map(p=>{const r=rec(p.id);return`<div class="pf${r?' done':''}"><div class="h"><b>${fd(p.date).slice(5)} ${wd(p.date)}</b><span>${p.time}</span><button class="r" data-act="open" data-v="${p.id}">${r?'기록 수정':'관람 기록'}</button></div>${castH(p)}<div class="st${r?' d':''}">${r?PZ+'관람 완료 · '+seatName(SM[r.seatId]):'미관람'}</div></div>`}).join('')||'<div class="empty">해당하는 회차가 없습니다.</div>'}`}
+function seats(){const c=counts(),s=SM[st.ss];return`<h1>Seats</h1><p class="sub">내가 앉아본 자리</p>${mapH(st.ss,true)}<div id="sd">${seatDetail()}</div>`}
+function seatDetail(){const s=SM[st.ss];if(!s)return'<div class="empty">좌석을 눌러 관람 기록을 확인하세요.</div>';const L=recs.filter(r=>r.seatId==s.id).sort((a,b)=>a.performanceId<b.performanceId?-1:1);
+ return`<h2>${seatName(s)} <small>(${GR[s.grade]})</small></h2><b>총 ${L.length}회 관람</b>${L.map(r=>{const p=PM[r.performanceId];return`<div class="dt"><b>${fd(p.date)} ${p.time}</b>${castH(p)}</div>`}).join('')}`}
+function stats(){const n=recs.length,ps=recs.map(r=>PM[r.performanceId]),ss=recs.map(r=>SM[r.seatId]);
+ return`<h1>Stats</h1><p class="sub">기록으로 자동 계산됩니다</p><div class="stub"><div><small>총 관람</small><b>${n}회</b></div><div><small>앉아본 좌석</small><b>${new Set(recs.map(r=>r.seatId)).size}석</b></div></div>
+ <h2>배우별 관람 횟수</h2>${ROLES.map(([k,l])=>`<b>${l}</b>${bars(tally(ps.map(p=>p.cast[k])))}`).join('<div style="height:8px"></div>')}
+ <h2>캐스팅 조합별</h2>${bars(tally(ps.map(p=>ROLES.map(([k])=>p.cast[k]).join(' / '))))}
+ <h2>층별</h2>${bars(tally(ss.map(s=>s.f+'층')))}<h2>좌석 열별</h2>${bars(tally(ss.map(rowName)))}
+ <h2>가장 많이 앉은 좌석</h2>${bars(tally(ss.map(seatName)).slice(0,5))}`}
+
+/* ===== 기록 모달 ===== */
+function openM(pid){const r=rec(pid),s=r&&SM[r.seatId];st.m={pid,sel:r?r.seatId:null,mode:'map',sec:s?s.sec:'',row:s?s.row:'',num:s?s.num:''};drawM()}
+function drawM(){const m=st.m,p=PM[m.pid],r=rec(m.pid);
+ $('#modal').innerHTML=`<div class="ov"><div class="sheet"><div class="sb"><div class="h" style="display:flex;justify-content:space-between;align-items:baseline"><b style="font-size:18px">${fd(p.date)} ${wd(p.date)} ${p.time}</b><button data-act="close">닫기</button></div>${castH(p)}
+ <div class="tabs"><button class="${m.mode=='map'?'on':''}" data-act="mode" data-v="map">좌석표에서 선택</button><button class="${m.mode=='num'?'on':''}" data-act="mode" data-v="num">번호로 입력</button></div><div id="mv"></div></div><div id="mp"></div></div></div>`;drawMV();drawMP()}
+function drawMV(){const m=st.m;if(m.mode=='map'){$('#mv').innerHTML=mapH(m.sel,false);centerOn(m.sel)}else{
+ const secs=Object.keys(SEC),rows=m.sec?[...new Set(S.filter(s=>s.sec==m.sec).map(s=>s.row))]:[],nums=S.filter(s=>s.sec==m.sec&&s.row==m.row).map(s=>s.num);
+ const o=(a,v,t)=>`<option value="${a}"${a==v?' selected':''}>${t}</option>`,rl=x=>x=='IN'?'안쪽':x=='OUT'?'바깥쪽':x+'열';
+ $('#mv').innerHTML=`<select data-k="sec">${o('',m.sec,'층 / 구역')}${secs.map(k=>o(k,m.sec,SEC[k].l)).join('')}</select>${rows.length>1?`<select data-k="row">${o('',m.row,'열')}${rows.map(x=>o(x,m.row,rl(x))).join('')}</select>`:''}${m.row?`<select data-k="num">${o('',m.num,'번호')}${nums.map(x=>o(x,m.num,x+'번')).join('')}</select>`:''}`}}
+function drawMP(){const m=st.m,s=SM[m.sel];$('#mp').innerHTML=`<div style="display:flex;align-items:center;gap:10px"><div style="flex:1;min-width:0"><small style="color:var(--sub);display:block">선택한 좌석</small><b>${s?seatName(s)+' · '+GR[s.grade]:'좌석을 선택하세요'}</b></div>${rec(m.pid)?'<button data-act="del">기록 삭제</button>':''}<button class="pri" data-act="save" ${s?'':'disabled'}>이 좌석으로 저장</button></div>`}
+function pickSeat(id){const m=st.m;if(m){const s=SM[id];Object.assign(m,{sel:id,sec:s.sec,row:s.row,num:s.num});mark(id);drawMP()}else{st.ss=id;mark(id);$('#sd').innerHTML=seatDetail()}}
+
+/* ===== render + events ===== */
+function render(){const T2=[['home','HOME'],['sched','SCHEDULE'],['seats','SEATS'],['stats','STATS']];
+ $('#nav').innerHTML=T2.map(([k,l])=>`<button class="${st.tab==k?'on':''}" data-act="tab" data-v="${k}">${l}</button>`).join('');
+ $('#app').innerHTML={home,sched,seats,stats}[st.tab]();if(st.tab=='seats')centerOn(st.ss)}
+document.addEventListener('click',e=>{const sb=e.target.closest('[data-seat]');if(sb)return pickSeat(sb.dataset.seat);
+ const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act,v=b.dataset.v,m=st.m;
+ if(a=='tab'){st.tab=v;render();scrollTo(0,0)}
+ else if(a=='f'||a=='mo'){st[a]=v=='all'?v:(a=='mo'?+v:v);render()}
+ else if(a=='zoom'){st.k=Math.min(2.4,Math.max(1,st.k+ +v));if(m)drawMV();else render()}
+ else if(a=='open')openM(v);
+ else if(a=='close'){st.m=null;$('#modal').innerHTML=''}
+ else if(a=='mode'){m.mode=v;document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x.dataset.v==v));drawMV()}
+ else if(a=='save'&&m.sel){recs=recs.filter(r=>r.performanceId!=m.pid);recs.push({performanceId:m.pid,watched:true,seatId:m.sel});persist();st.m=null;$('#modal').innerHTML='';render()}
+ else if(a=='del'&&!m.cd){m.cd=1;b.textContent='정말 삭제할까요? 한 번 더 누르세요'}
+ else if(a=='del'){recs=recs.filter(r=>r.performanceId!=m.pid);persist();st.m=null;$('#modal').innerHTML='';render()}});
+document.addEventListener('change',e=>{const k=e.target.dataset.k,m=st.m;if(!k||!m)return;const v=e.target.value;
+ if(k=='sec'){Object.assign(m,{sec:v,row:v&&new Set(S.filter(s=>s.sec==v).map(s=>s.row)).size==1?S.find(s=>s.sec==v).row:'',num:'',sel:null})}
+ else if(k=='row')Object.assign(m,{row:v,num:'',sel:null});
+ else{m.num=+v;const s=S.find(s=>s.sec==m.sec&&s.row==m.row&&s.num==m.num);m.sel=s?s.id:null}
+ drawMV();drawMP()});
+render();
+</script></body></html>
